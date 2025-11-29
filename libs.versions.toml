@@ -24,6 +24,10 @@ fabricLoader = "0.16.9"
 fabricApi = "0.109.0+1.21.1"
 flk = "1.12.3+kotlin.2.0.21"
 
+architectury = "13.0.8"
+architectury-loom = "1.11-SNAPSHOT"
+architectury-plugin = "3.4-SNAPSHOT"
+
 mixin = "0.8.5"
 mixinExtras = "0.3.5"
 
@@ -35,9 +39,12 @@ flk = { group = "net.fabricmc", name = "fabric-language-kotlin", version.ref = "
 kff = { group = "thedarkcolour", name = "kotlinforforge-neoforge", version.ref = "kff" }
 mixin = { group = "org.spongepowered", name = "mixin", version.ref = "mixin" }
 mixinExtras-common = { group = "io.github.llamalad7", name = "mixinextras-common", version.ref = "mixinExtras" }
+architectury = {group = "dev.architectury", name = "architectury", version.ref = "architectury"}
 
 [plugins]
 kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
 moddev = { id = "net.neoforged.moddev", version.ref = "moddev" }
 loom = { id = "fabric-loom", version.ref = "loom" }
+architectury-loom = {id = "dev.architectury.loom", version.ref = "architectury-loom"}
+architectury-plugin = {id = "architectury-plugin", version.ref = "architectury-plugin"}

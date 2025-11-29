@@ -5,30 +5,30 @@ rootProject.name = "RedsTMS"
 
 pluginManagement {
     repositories {
+        maven("https://maven.fabricmc.net/")
+        maven("https://maven.architectury.dev/")
+        maven("https://maven.minecraftforge.net/")
+        maven("https://maven.neoforged.net/releases")
+        maven("https://maven.impactdev.net/repository/development/")
+        maven("https://cursemaven.com")
+        maven("https://thedarkcolour.github.io/KotlinForForge/")
+        maven("https://repo.spongepowered.org/repository/maven-public/")
+        maven("https://maven.parchmentmc.org")
         gradlePluginPortal()
         mavenCentral()
-        exclusiveContent {
-            forRepository {
-                maven {
-                    name = "Fabric"
-                    url = uri("https://maven.fabricmc.net")
-                }
-            }
-            filter {
-                includeGroup("net.fabricmc")
-                includeGroup("fabric-loom")
-            }
-        }
+    }
+    plugins {
+        kotlin("jvm") version "2.0.21"
     }
 }
 
-dependencyResolutionManagement {
-    versionCatalogs {
-        register("libs") {
-            from(files("libs.versions.toml"))
-        }
-    }
-}
+//dependencyResolutionManagement {
+//    versionCatalogs {
+//        register("libs") {
+//            from(files("libs.versions.toml"))
+//        }
+//    }
+//}
 
 plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
